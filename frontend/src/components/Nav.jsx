@@ -2,6 +2,12 @@ import { NavLink } from 'react-router-dom';
 import { SiGithub, SiInstagram, SiFacebook } from 'react-icons/si';
 
 const Nav = () => {
+
+  const contact = [
+            {href: 'https://github.com/ziora-lawrence', label: 'github', Icon: SiGithub },
+            {href: 'https://instagram.com/shadowthe_creator', label: 'instagram', Icon: SiInstagram },
+            {href: 'https://facebook.com/ziora.lawrence', label: 'facebook', Icon: SiFacebook },
+          ];
   return (
     <header className="sticky top-0 z-10 mx-auto mt-6 w-[min(1200px,calc(100%-2rem))] rounded-full border border-white/40 bg-stone-100/70 px-6 py-3 shadow-sm backdrop-blur-md">
       <div className="flex items-center justify-between gap-4">
@@ -29,17 +35,12 @@ const Nav = () => {
             </NavLink>
           ))}
         </nav>
-
         <div className="flex items-center gap-4 text-stone-700">
-          <a href="https://github.com/ziora-lawrence" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="transition hover:text-olive-700">
-            <SiGithub className="h-5 w-5" />
-          </a>
-          <a href="https://instagram.com/shadowthe_creator" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transition hover:text-olive-700">
-            <SiInstagram className="h-5 w-5" />
-          </a>
-          <a href="https://facebook.com/ziora.lawrence" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="transition hover:text-olive-700">
-            <SiFacebook className="h-5 w-5" />
-          </a>
+          {contact.map(({href, label, Icon}) => (
+            <a key={href} href={href} target='_blank' rel='noopener noreferrer' aria-label={label} className="transition hover:text-olive-700">
+              <Icon className="w-5 h-5" />
+            </a>
+          ))}
         </div>
       </div>
     </header>
