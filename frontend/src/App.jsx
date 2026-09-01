@@ -5,10 +5,11 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 
+
 function App() {
 
   return (
-    <div className="flex min-h-screen flex-col bg-stone-100">
+    <div className="flex h-screen flex-col bg-stone-100/70">
       <Nav />
       <Routes>
         <Route path='/' element={<Home />} />
