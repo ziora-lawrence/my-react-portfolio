@@ -4,19 +4,23 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Particle from './components/Particle';
 
 
 function App() {
 
   return (
-    <div className="flex h-screen flex-col bg-stone-100/70">
-      <Nav />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/projects' element={<Projects />} />
-        <Route path='/contact' element={<Contact />} />
-      </Routes>
+    <div className="relative flex h-screen flex-col bg-stone-100/70">
+      <Particle />
+      <div className="relative z-10 flex h-screen flex-col">
+        <Nav />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+      </div>
     </div>
   )
 }

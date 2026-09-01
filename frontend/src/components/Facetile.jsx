@@ -23,11 +23,11 @@ const Facetile = ({image, Name, note}) => {
       y.set(0);
     }
    return (
-    <motion.div className="w-100 h-100 bg-amber-700 rounded-4xl border border-white/40" ref={ref} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} style={{rotateX, rotateY}}>
+    <motion.div className="w-100 h-auto rounded-4xl border-2 shadow-2xl border-white/40" ref={ref} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} style={{rotateX, rotateY}} drag dragConstraints={{top: 0, left: 0, right: 0, bottom: 0}} dragElastic={0.2} whileTap={{scale: 0.9}}>
       <img src={image}  alt={Name} className="w-100 h-100 rounded-4xl" />
       <div>
-        <h1>{Name}</h1>
-        <p>{note}</p>
+        <motion.h1 drag className="ml-4 text-2xl text-red-500 font-extrabold ">{Name}</motion.h1>
+        <p className="ml-30 text-lg text-gray-700">{note}</p>
       </div>
     </motion.div>
   )

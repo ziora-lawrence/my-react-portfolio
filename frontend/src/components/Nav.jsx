@@ -9,7 +9,7 @@ const Nav = () => {
             {href: 'https://facebook.com/ziora.lawrence', label: 'facebook', Icon: SiFacebook },
           ];
   return (
-    <header className="sticky top-0 z-10 mx-auto mt-6 w-[min(1200px,calc(100%-2rem))] rounded-full border border-white/40 bg-stone-100/70 px-6 py-3 shadow-sm backdrop-blur-md">
+    <header className="sticky top-0 z-10 w-full bg-stone-100/70 px-6 py-3 shadow-sm backdrop-blur-md border-b border-white/40">
       <div className="flex items-center justify-between gap-4">
         <h1 className="text-2xl font-bold tracking-tight text-stone-700">Iwuji</h1>
 
