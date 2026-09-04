@@ -1,17 +1,22 @@
-import { useCallback } from 'react';
-import Particles from '@tsparticles/react';
+import { useEffect, useState } from 'react';
+import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 
 const Particle = () => {
-  const particlesInit = useCallback(async (engine) => {
-    await loadSlim(engine);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setReady(true));
   }, []);
+
+  if (!ready) return null;
 
   return (
     <div className="pointer-events-none absolute inset-0 z-0">
       <Particles
         id="tsparticles"
-        init={particlesInit}
         options={{
           background: { color: 'transparent' },
           fullScreen: { enable: false },

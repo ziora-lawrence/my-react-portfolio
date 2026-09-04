@@ -9,11 +9,11 @@ const Nav = () => {
             {href: 'https://facebook.com/ziora.lawrence', label: 'facebook', Icon: SiFacebook },
           ];
   return (
-    <header className="sticky top-0 z-10 w-full bg-stone-100/70 px-6 py-3 shadow-sm backdrop-blur-md border-b border-white/40">
+    <header className="sticky top-0 z-30 w-full bg-stone-100/70 px-6 py-3 shadow-sm backdrop-blur-md border-b border-white/40">
       <div className="flex items-center justify-between gap-4">
-        <h1 className="text-2xl font-bold tracking-tight text-stone-700">Iwuji</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-stone-700 font-heading">Iwuji</h1>
 
-        <nav className="hidden items-center gap-2 md:flex">
+        <nav className="hidden items-center gap-2 md:flex heading-body">
           {[
             ['Home', '/'],
             ['About', '/about'],
