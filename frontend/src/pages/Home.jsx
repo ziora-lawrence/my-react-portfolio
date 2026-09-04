@@ -2,6 +2,7 @@ import Facetile from "../components/Facetile";
 import Seemore from "../components/seemore";
 import Scrolldown from "../components/scrolldown";
 import anime from "../assets/anime.png";
+import CarousselMovement from "../components/CarousselMovement";
 
 const Home = () => {
   return (
@@ -40,12 +41,15 @@ const Home = () => {
             </div>
           </div>
       </section> 
-      <section className=" h-[200vh] bg-black/55 ">
-        <header className=" flex justify-center ">
-          <h1 className="text-2xl font-extrabold font-heading text-blue-500">
+      <section className=" h-[100vh] bg-black/55 ">
+        <header className=" flex justify-center pt-50 mb-40">
+          <h1 className="text-7xl font-extrabold font-heading text-blue-500">
             welcome to my project display
           </h1>
         </header>
+        <div>
+          <CarousselMovement />
+        </div>
       </section>   
     </div>
   );
