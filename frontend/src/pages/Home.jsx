@@ -3,6 +3,8 @@ import Seemore from "../components/seemore";
 import Scrolldown from "../components/scrolldown";
 import anime from "../assets/anime.png";
 import CarousselMovement from "../components/CarousselMovement";
+import {motion} from "framer-motion";
+import Findout from "../components/Findout";
 
 const Home = () => {
   return (
@@ -22,6 +24,9 @@ const Home = () => {
               terminal at 2am wondering why my nav bar had three identical keys,
               I realized I'd found my actual thing.
             </p>
+            <div className="flex w-20 pt-10 justify-center ">
+              <Findout content="Find out" />
+            </div>
           </div>
 
           <div className="cursor-grab relative flex flex-col items-center">
@@ -41,14 +46,17 @@ const Home = () => {
             </div>
           </div>
       </section> 
-      <section className=" h-[100vh] bg-black/55 ">
-        <header className=" flex justify-center pt-50 mb-40">
-          <h1 className="text-7xl font-extrabold font-heading text-blue-500">
+      <section className=" h-[100vh] bg-black ">
+        <header className=" flex justify-center pt-20 mb-40">
+          <motion.h1 animate={{ x: [0, -10, 0]}} transition={{ duration: 1, repeat: Infinity, ease: "easeInOut"}}  className="text-7xl font-extrabold font-heading text-blue-500">
             welcome to my project display
-          </h1>
+          </motion.h1>
         </header>
         <div>
           <CarousselMovement />
+        </div>
+        <div>
+
         </div>
       </section>   
     </div>
